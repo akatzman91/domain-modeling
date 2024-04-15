@@ -27,16 +27,16 @@ CREATE TABLE courses (
   description TEXT
 );
 
-CREATE TABLE sections (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  time TEXT,
-  course_id TEXT,
-  teacher_id TEXT
-);
-
 CREATE TABLE sections(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   time TEXT,
   course_id INTEGER,
   teacher_id INTEGER
-) 
+);
+
+CREATE TABLE enrollments(
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  student_id INTEGER,
+  section_id INTEGER
+);
+
